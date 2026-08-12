@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Creating directory"
+mkdir /home/ubuntu/Desktop/FLAG
+
+ip a
+
+echo "Changing network profile to static"
+
+sudo nmcli connection modify "Profile 1" ipv4.method manual ipv4.addresses "192.168.50.3/24"
+
+sudo nmcli connection up "Profile 1"
+
+echo "-------------ip changed to manual"
+
+ip a

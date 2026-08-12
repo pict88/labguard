@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ip a 
+
+echo "Changing network profile to auto"
+
+sudo nmcli connection modify "Profile 1" ipv4.method auto ipv4.addresses ""
+
+sudo nmcli connection up "Profile 1"
+
+echo "------------------ip changed to auto"
+
+ip a
+
+echo "removing directory"
+
+rmdir /home/ubuntu/Desktop/FLAG
