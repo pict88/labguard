@@ -1,3 +1,5 @@
+#put file in /usr/local/bin
+
 #!/bin/bash
 
 echo "Creating directory"
